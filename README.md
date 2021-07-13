@@ -1,0 +1,4 @@
+# Java Event Driven System
+This repository is just me experimenting with creating a very simple (and non-efficient, I guess) Event System, after being hyped when I learned how Minecraft handles its events.
+
+My goal was to create event listener functions which take an Event as a method in classes which inherit a common Listener interface. Also as Minecraft, I wanted those event listener functions to have names that are not dependent on the system itself, rather parameters that depend on the system, such as taking a `PlayerChatEvent` as an argument - or whatever event they want. As a result, I used the Java Reflect API to get both parameters of the methods and the methods itself, and looped over each class, then methods, then parameters. Is this efficient though? Certainly not. If I were to use this system in a real game, I'd likely use a common method name to handle event listeners. Anyways, this was an experimental project for me - even though it is simple.
